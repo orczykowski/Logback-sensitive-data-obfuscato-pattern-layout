@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="mask" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="io.github.orczykowski.logback.obfuscator.MaskSensitiveDataLayout">
+                <mask>***SENSITIVE*DATA***</mask>
+                <patternName>JSON</patternName>
+                <patternName>EQUAL_AND_SQUARE_BRACKETS</patternName>
+                <fieldName>firstName</fieldName>
+                <fieldName>email</fieldName>
+                <pattern>%-5p %c: %m</pattern>
+            </layout>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="mask"/>
+    </root>
+
+</configuration>
