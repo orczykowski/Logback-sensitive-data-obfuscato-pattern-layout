@@ -1,3 +1,4 @@
+# Logback sensitive data obfuscator pattern layout
 ## Why
 
 Masking sensitive data in logs is crucial for protecting user privacy, complying with legal regulations such as
@@ -62,7 +63,7 @@ For more information, please refer to the configuration section.
 </encoder>
 ```
 
-3. Choose type o masking by using `SensitiveDataAsMaskLayout` or `SensitiveDataAsShortcutLayout`
+3. Choose type o masking by using `MaskSensitiveDataAsShortcutLayout` or `MaskSensitiveDataLayout`
 
 ```xml
 
